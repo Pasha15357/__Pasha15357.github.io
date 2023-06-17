@@ -12,45 +12,49 @@
 <body>
 	<header class="header">
 		<div class="header__container">
-			<img src="img/логотип.svg" alt="Логотип" class="logo">
-			<div class="description">
-				<p>Зимние сады из алюминиевого профиля под ключ по всем дружественным странам</p>
-
+			<div class="menu__icon">
+				<span></span>
 			</div>
-			<div class="find__map">
-				<img src="img/Group 4.svg" alt="">
-				<div class="find__text">
-					<p class="p1">Найдите нас на карте</p>
-					<p class="p2"><a
-							href="https://yandex.by/maps/10274/grodno/?from=mapframe&ll=23.824296%2C53.666206&mode=usermaps&source=mapframe&um=constructor%3Aaaa66777ed85266b10ceca4a072519c4eb79c483f1f384694660bcc8cad58dd2&utm_source=mapframe&z=16">Показать
-							на карте адрес офиса</a></p>
+			<div class="menu__body">
+				<img src="img/логотип.svg" alt="Логотип" class="logo">
+				<div class="description">
+					<p class="p1"><a class="menu__link" data-goto=".page__section2" href="#">Зимние сады из алюминиевого
+							профиля под
+							ключ по всем дружественным странам</a></p>
+
 				</div>
-			</div>
+				<div class="find__map">
+					<img src="img/Group 4.svg" alt="">
+					<div class="find__text">
+						<p class="p1">Найдите нас на карте</p>
+						<p class="p2"><a class="menu__link" data-goto=".page__section1" href="#">Показать на карте адрес
+								офиса</a></p>
+					</div>
+				</div>
 
-			<div class="social">
-				<p class="meow">Задайте вопрос напрямую:</p>
-				<ul class="social-icons">
-					<li><a class="icon" target="_blank" href="https://www.instagram.com/__pashagavrilov__/"><img
-								src="img/instagram.svg" alt="Соцсеть 1"></a>
-					</li>
-					<li><a class="icon" target="_blank" href="https://t.me/pashagavrilov1"><img src="img/telegram.svg"
-								alt="Соцсеть 2"></a>
-					</li>
-					<li><a class="icon" href="#"><img src="img/whatsapp.svg" alt="Соцсеть 3"></a></li>
-					<li><a class="icon" target="_blank" href="https://vk.com/pashagavrilov"><img src="img/vk.svg"
-								alt="Соцсеть 3"></a>
-					</li>
-				</ul>
-			</div>
+				<div class="social">
+					<p class="meow">Задайте вопрос напрямую:</p>
+					<ul class="social-icons">
+						<li><a class="icon" target="_blank" href="https://www.instagram.com/__pashagavrilov__/"><img
+									src="img/instagram.svg" alt="Соцсеть 1"></a>
+						</li>
+						<li><a class="icon" target="_blank" href="https://t.me/pashagavrilov1"><img
+									src="img/telegram.svg" alt="Соцсеть 2"></a>
+						</li>
+						<li><a class="icon" href="#"><img src="img/whatsapp.svg" alt="Соцсеть 3"></a></li>
+						<li><a class="icon" target="_blank" href="https://vk.com/pashagavrilov"><img src="img/vk.svg"
+									alt="Соцсеть 3"></a>
+						</li>
+					</ul>
+				</div>
 
-			<div class="call">
-				<p>Звоните сейчас, работаем:</p>
-				<p class="phone-number">+7 (123) 456-7890</p>
+				<div class="call">
+					<p>Звоните сейчас, работаем:</p>
+					<p class="phone-number">+7 (123) 456-7890</p>
+				</div>
 			</div>
 		</div>
 	</header>
-
-
 	<section class="cta">
 		<div class="cta__container container">
 			<div class="cta_text">
@@ -98,12 +102,12 @@
 
 		</div>
 	</section>
-	<!--<section class="fix__price">
+	<section class="fix__price">
 		<div class="container">
 			<p class="p1">Узнайте стоимость зимнего сада из алюминиевого профиля, ответив на вопросы за 2 минуты</p>
 			<button class="fix__price__button">+ зафиксируем цену на 14 дней </button>
 		</div>
-		<div class="quiz">
+		<!--<div class="quiz">
 			<div class="head1q">
 				<p>Вы отвечаете на 1 вопрос из 6</p>
 			</div>
@@ -124,12 +128,15 @@
 					нажмите кнопку “Далее”</p>
 				<button class="subadvantage__button">Далее</button>
 			</div>
-		</div>
+		</div>-->
 
-	</section>-->
+	</section>
 	<section class="mistakes">
-		<div class="mistakes__container">
-			<img style="padding-top: 0;" src="img/Frame 69.svg" alt="">
+		<div class="mistakes__container container">
+			<div class="mistakes__photo">
+				<img src="img/Frame 69.svg" alt="">
+			</div>
+
 			<div class="mistakes__text">
 				<div class="frame65">
 					<p class="p1">Более 80% компаний представляющих аналогичные услуги изготавливают конструкции из
@@ -165,12 +172,9 @@
 						<img src="img/Ellipse 15.png" alt="">
 						<p>Не предлагают дополнительных услуг</p>
 					</div>
-
 				</div>
 			</div>
-
 		</div>
-		<img class="grass" src="img/grass (1) 1.svg" alt="">
 		</div>
 	</section>
 	<section class="list__advantages">
@@ -249,46 +253,60 @@
 						<p class="p2">Оставьте заявку на расчет подробной сметы от инженера.</p>
 						<button class="subadvantage__button">Оставить заявку</button>
 					</div>
-					<img src="img/зимний сад.png" alt="">
+					<div class="advantages__photo">
+						<img src="img/зимний сад.png" alt="">
+					</div>
 				</div>
 			</div>
 
 		</div>
 	</section>
-	<section class="cards__block">
+	<section class="cards__block page__section2">
 		<div class="cards">
 			<div class="product__cards">
 				<div class="product__card">
-					<img class="img1" src="img/Rectangle 55.svg" alt="">
+					<div class="product__card-img">
+						<img class="img1" src="img/Rectangle 55.svg" alt="">
+					</div>
 					<p class="p1">Зимний сад</p>
 					<button class="card__button">Подробнее</button>
 				</div>
 				<div class="product__card">
-					<img src="img/IMG_5918 1.png" alt="">
+					<div class="product__card-img">
+						<img src="img/IMG_5918 1.png" alt="">
+					</div>
 					<p class="p1">Оранжерея</p>
 					<button class="card__button">Подробнее</button>
 				</div>
 			</div>
 			<div class="product__cards">
 				<div class="product__card">
-					<img src="img/Rectangle 55.png" alt="">
+					<div class="product__card-img">
+						<img src="img/Rectangle 55.png" alt="">
+					</div>
 					<p class="p1">Веранда или патио</p>
 					<button class="card__button">Подробнее</button>
 				</div>
 				<div class="product__card">
-					<img src="img/IMG_5934 1.png" alt="">
+					<div class="product__card-img">
+						<img src="img/IMG_5934 1.png" alt="">
+					</div>
 					<p class="p1">Крыша из стекла</p>
 					<button class="card__button">Подробнее</button>
 				</div>
 			</div>
 			<div class="product__cards">
 				<div class="product__card">
-					<img src="img/IMG_5933 1.png" alt="">
+					<div class="product__card-img">
+						<img src="img/IMG_5933 1.png" alt="">
+					</div>
 					<p class="p1">Бассейн под стеклянной крышей</p>
 					<button class="card__button">Подробнее</button>
 				</div>
 				<div class="product__card">
-					<img src="img/IMG_5891 1.png" alt="">
+					<div class="product__card-img">
+						<img src="img/IMG_5891 1.png" alt="">
+					</div>
 					<p class="p1">Террариум</p>
 					<button class="card__button">Подробнее</button>
 				</div>
@@ -297,10 +315,12 @@
 
 	</section>
 	<section class="individuality">
-		<div class="individuality__container">
+		<div class="individuality__container container">
 			<p class="p1">Индивидуальность – это просто!</p>
 			<div class="individuality__description">
-				<img src="img/Rectangle 95.png" alt="">
+				<div class="individuality__photo">
+					<img src="img/Rectangle 95.png" alt="">
+				</div>
 				<div class="individuality__text">
 					<p class="p2">Наши технологии позволяют окрашивать алюминиевые конструкции в любой цвет, а широкая
 						палитра цветов может придать выразительность архитектурному решению дома.
@@ -383,21 +403,29 @@
 		</div>
 	</section>
 	<section class="installation">
-		<div class="installation__container">
-			<p class="p1">Установка на готовый фундамент либо помощь в его подборе</p>
+		<div class="installation__container container">
+			<div class="installation__text">
+				<p class="p1">Установка на готовый фундамент либо помощь в его подборе</p>
+			</div>
 			<div class="installation__cards">
 				<div class="installation__card">
-					<img src="img/3 (1) 1.png" alt="">
+					<div class="card__photo">
+						<img src="img/3 (1) 1.png" alt="">
+					</div>
 					<p class="p2">Столбчатый фундамет</p>
 					<button class="installation__button">Подробнее</button>
 				</div>
 				<div class="installation__card">
-					<img src="img/3 (1) 2.png" alt="">
+					<div class="card__photo">
+						<img src="img/3 (1) 2.png" alt="">
+					</div>
 					<p class="p2">Плиточный фундамент</p>
 					<button class="installation__button">Подробнее</button>
 				</div>
 				<div class="installation__card">
-					<img src="img/3 (1) 3.png" alt="">
+					<div class="card__photo">
+						<img src="img/3 (1) 3.png" alt="">
+					</div>
 					<p class="p2">Ленточный фундамент</p>
 					<button class="installation__button">Подробнее</button>
 				</div>
@@ -433,19 +461,29 @@
 				дополнительные опции от прямых производителей для вашего комфорта! </p>
 			<div class="services__row-photos">
 				<div class="services__photos">
-					<img src="img/Group 122.svg" alt="">
-					<img src="img/Group 121.svg" alt="">
+					<div class="services__photo">
+						<img src="img/Group 122.svg" alt="">
+					</div>
+					<div class="services__photo">
+						<img src="img/Group 121.svg" alt="">
+					</div>
 				</div>
 				<div class="services__photos">
-					<img src="img/Group 120.svg" alt="">
-					<img src="img/Group 119.svg" alt="">
-					<img src="img/Group 118.svg" alt="">
+					<div class="services__photo">
+						<img src="img/Group 120.svg" alt="">
+					</div>
+					<div class="services__photo">
+						<img src="img/Group 119.svg" alt="">
+					</div>
+					<div class="services__photo">
+						<img src="img/Group 118.svg" alt="">
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="form">
-		<div class="form__container">
+	<section class="form page__section1">
+		<div class="form__container container">
 			<div class="phone">
 				<p class="p1">Оставьте номер,
 					позвоним в течение 15 минут в рабочее время
@@ -474,13 +512,17 @@
 					Волокаламское шоссе,
 					д.1, стр. 1</p>
 			</div>
-			<script type="text/javascript" charset="utf-8" async
-				src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaaa66777ed85266b10ceca4a072519c4eb79c483f1f384694660bcc8cad58dd2&amp;width=385&amp;height=424&amp;lang=ru_RU&amp;scroll=true"></script>
+			<iframe
+				src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaaa66777ed85266b10ceca4a072519c4eb79c483f1f384694660bcc8cad58dd2&amp;source=constructor"
+				min-width="100" width="100%" height="424" frameborder="0"></iframe>
 		</div>
 	</section>
 	<a href="#" class="scroll-to-top">
 		<img src="img/arrow.png" alt="">
 	</a>
+	</div>
+
+
 	<footer>
 		<div class="footer__content">
 			<img src="img/логотип.svg" alt="">
