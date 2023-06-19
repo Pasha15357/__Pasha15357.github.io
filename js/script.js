@@ -5,6 +5,19 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 
 } else document.body.classList.add('_pc');
 
+const header = document.querySelector('.header');
+const content = document.querySelector('.cta');
+
+// Функция для обновления отступа секции
+function updateSectionPaddingTop() {
+	const headerHeight = header.offsetHeight; // Получаем высоту шапки
+	content.style.paddingTop = 40 + headerHeight + 'px'; // Применяем отступ для секции
+}
+
+// Вызываем функцию при загрузке страницы и при изменении размеров окна
+window.addEventListener('load', updateSectionPaddingTop);
+window.addEventListener('resize', updateSectionPaddingTop);
+
 document.addEventListener('DOMContentLoaded', () => {
 	const inputElement = document.querySelector('input') // ищем наш единственный input
 	const maskOptions = { // создаем объект параметров
@@ -40,7 +53,7 @@ if (menuLinks.length > 0) {
 		const menuLink = e.target;
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY - document.querySelector('header').offsetHeight - 20;
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY - document.querySelector('header').offsetHeight - 50;
 			if (iconMenu.classList.contains('_active')) {
 				document.body.classList.remove('_lock');
 				iconMenu.classList.remove('_active');
@@ -73,5 +86,36 @@ if (iconMenu) {
 		else {
 			document.body.style.overflow = 'hidden'
 		}
+		if (scrollToTopButton.style.display == 'none' && window.scrollY > 0) {
+			scrollToTopButton.style.display = 'block';
+		} else {
+			scrollToTopButton.style.display = 'none';
+		}
 	})
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	var popup = document.getElementById('popup');
+	var closeBtn = document.getElementById('close-btn');
+
+	function openPopup() {
+		popup.style.display = 'flex';
+	}
+
+	function closePopup() {
+		popup.style.display = 'none';
+	}
+
+	closeBtn.addEventListener('click', closePopup);
+	popup.addEventListener('click', function (event) {
+		if (event.target === popup) {
+			closePopup();
+		}
+	});
+
+	// Открытие pop-up окна при необходимости
+	// Например, по щелчку на кнопке
+	var openBtn = document.getElementById('open-btn');
+	openBtn.addEventListener('click', openPopup);
+});
