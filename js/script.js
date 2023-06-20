@@ -53,7 +53,7 @@ if (menuLinks.length > 0) {
 		const menuLink = e.target;
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY - document.querySelector('header').offsetHeight - 50;
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY - document.querySelector('header').offsetHeight - 15;
 			if (iconMenu.classList.contains('_active')) {
 				document.body.classList.remove('_lock');
 				iconMenu.classList.remove('_active');
@@ -118,4 +118,33 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Например, по щелчку на кнопке
 	var openBtn = document.getElementById('open-btn');
 	openBtn.addEventListener('click', openPopup);
+});
+
+
+// Получаем элементы
+const tabItems = document.querySelectorAll('.tab-item');
+const tabContent = document.querySelectorAll('.tab-pane');
+
+// Функция для обработки клика на таб
+function handleTabClick() {
+	// Удаляем класс активного таба у всех элементов
+	tabItems.forEach(item => {
+		item.classList.remove('active');
+	});
+
+	// Скрываем все контентные панели
+	tabContent.forEach(content => {
+		content.classList.remove('active');
+	});
+
+	// Добавляем класс активного таба и показываем соответствующую контентную панель
+	this.classList.add('active');
+	const tabId = this.getAttribute('data-tab');
+	const activeTabContent = document.getElementById(tabId);
+	activeTabContent.classList.add('active');
+}
+
+// Добавляем обработчик клика на каждый таб
+tabItems.forEach(item => {
+	item.addEventListener('click', handleTabClick);
 });
