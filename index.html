@@ -7,28 +7,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Практика</title>
 	<link rel="stylesheet" href="css/style.css">
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 </head>
 
 <body>
 	<header class="header">
+		<!-- Заголовок страницы -->
 		<div class="header__container container">
 			<div class="menu__icon">
 				<span></span>
 			</div>
 			<div class="menu__body">
+				<!-- Логотип -->
 				<img src="img/логотип.svg" alt="Логотип" class="logo">
 				<div class="description">
+					<!-- Ссылка в меню -->
 					<p class="p1"><a class="menu__link" data-goto=".page__section2" href="#">Зимние сады из алюминиевого
 							профиля под
 							ключ по всем дружественным странам</a></p>
-
 				</div>
 				<div class="find__map">
+					<!-- Иконка местоположения на карте -->
 					<img src="img/Group 4.svg" alt="">
 					<div class="find__text">
+						<!-- Текст о поиске на карте -->
 						<p class="p1">Найдите нас на карте</p>
+						<!-- Ссылка на показ адреса на карте -->
 						<p class="p2"><a class="menu__link" data-goto=".page__section1" href="#">Показать на карте адрес
 								офиса</a></p>
 					</div>
@@ -36,6 +42,7 @@
 
 				<div class="social">
 					<p class="meow">Задайте вопрос напрямую:</p>
+					<!-- Социальные иконки -->
 					<ul class="social-icons">
 						<li><a class="icon" target="_blank" href="https://www.instagram.com/__pashagavrilov__/"><img
 									src="img/instagram.svg" alt="Соцсеть 1"></a>
@@ -51,6 +58,7 @@
 				</div>
 
 				<div class="call">
+					<!-- Контактный телефон -->
 					<p>Звоните сейчас, работаем:</p>
 					<p class="phone-number">+7 (123) 456-7890</p>
 				</div>
@@ -59,16 +67,17 @@
 	</header>
 
 
-
 	<section class="cta">
 		<div class="cta__container container">
 			<div class="cta_text">
+				<!-- Заголовок раздела -->
 				<p class="p1">Проектирование, изготовление и монтаж</p>
 				<p class="p2">Зимних садов из алюминиевого профиля</p>
 				<p>Хотите наслаждаться внешним видом круглый год, не выходя из дома?
 					Зимний сад прекрасный вариант не отказывать себе в таком удовольствии.</p>
 				<div class="advantages">
 					<div class="subadvantage">
+						<!-- Преимущество 1 -->
 						<div class="advantage">
 							<img src="img/icon.svg" alt="">
 							<p><span style="font-weight: 700;">Полный цикл работ</span><br>
@@ -76,6 +85,7 @@
 								до финала проекта
 							</p>
 						</div>
+						<!-- Преимущество 2 -->
 						<div class="advantage">
 							<img src="img/icon.svg" alt="">
 							<p><span style="font-weight: 700;">Высокий уровень компетенции сотрудников</span><br>
@@ -83,63 +93,93 @@
 								эксплуатацию
 							</p>
 						</div>
-
 					</div>
 					<div class="subadvantage">
+						<!-- Преимущество 3 -->
 						<div class="advantage">
 							<img src="img/icon.svg" alt="">
 							<p><span style="font-weight: 700;">Скидки и бонусы</span><br>
-
 								Дарим приятные бонусы и скидки
 								при заказе </p>
 						</div>
-
+						<!-- Преимущество 4 -->
 						<div class="advantage">
 							<img src="img/icon.svg" alt="">
 							<p><span style="font-weight: 700;">Обслуживание</span><br>
-
 								Опытные специалисты проводят комплекс работ по гарантийному обслуживанию. </p>
 						</div>
 					</div>
-
 				</div>
+				<!-- Кнопка для рассчета стоимости -->
 				<button class="subadvantage__button">Рассчитать стоимость</button>
-
 			</div>
 
+			<!-- Изображение -->
 			<img style="width: 100%; min-width: 20%;"
 				src="img/1620641553_35-p-zimnii-sad-iz-polikarbonata-foto-37 1.svg" alt="">
 
 		</div>
 	</section>
+	<div id="preloader">
+		<div id="loader"></div>
+	</div>
+	<section>
+		<div class="container">
+			<!-- Слайдер с изображениями -->
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<!-- Слайд 1 -->
+					<div class="swiper-slide"><img src="img/двухскатный.svg" alt=""></div>
+					<!-- Слайд 2 -->
+					<div class="swiper-slide"><img src="img/полигон.svg" alt=""></div>
+					<!-- Слайд 3 -->
+					<div class="swiper-slide"><img src="img/односкатный.svg" alt=""></div>
+					<!-- Слайд 4 -->
+					<div class="swiper-slide"><img src="img/пристроенный к внешнему углу.svg" alt=""></div>
+					<!-- Слайд 5 -->
+					<div class="swiper-slide"><img src="img/пристроенный к внутреннему углу.svg" alt=""></div>
+				</div>
+				<!-- Пагинация слайдера -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="testimonials">
+				<!-- Карусель с отзывами -->
+				<div class="scroller">
+					<!-- Элемент 1 -->
+					<div class="item">
+						<div class="card">
+							<img src="img/tab1-1.svg" alt="">
+						</div>
+					</div>
+					<!-- Элемент 2 -->
+					<div class="item">
+						<div class="card">
+							<img src="img/tab2-1.svg" alt="">
+						</div>
+					</div>
+					<!-- Элемент 3 -->
+					<div class="item">
+						<div class="card">
+							<img src="img/tab3_1.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- Кнопки для прокрутки карусели -->
+				<span class="btn prev">&lt;</span>
+				<span class="btn next">&gt;</span>
+			</div>
+		</div>
+	</section>
 	<section class="fix__price">
 		<div class="container">
+			<!-- Секция с фиксированной ценой -->
 			<p class="p1">Узнайте стоимость зимнего сада из алюминиевого профиля, ответив на вопросы за 2 минуты</p>
 			<button class="fix__price__button">+ зафиксируем цену на 14 дней </button>
 		</div>
-		<!--<div class="quiz">
-			<div class="head1q">
-				<p>Вы отвечаете на 1 вопрос из 6</p>
-			</div>
-			<div class="slider">
-				<span class="page page--active"> </span>
-				<span class="page"> </span>
-				<span class="page"> </span>
-				<span class="page"> </span>
-				<span class="page"> </span>
-				<span class="page"> </span>
-			</div>
-			<div class="head1q">
-				<p>Проектирование</p>
-			</div>
-			<div class="next">
-				<img src="img/Group 39.svg" alt="">
-				<p>Выберите вариант ответа
-					нажмите кнопку “Далее”</p>
-				<button class="subadvantage__button">Далее</button>
-			</div>
-		</div>-->
-
 	</section>
 	<section class="mistakes">
 		<div class="mistakes__container container">
@@ -148,11 +188,75 @@
 			</div>
 
 			<div class="mistakes__text">
+				<!-- Блок с описанием ошибок других компаний -->
 				<div class="frame65">
 					<p class="p1">Более 80% компаний представляющих аналогичные услуги изготавливают конструкции из
 						некачественных
-						материалов, а так же сталкиваются
+						материалов, а также сталкиваются
 						со сложностями при монтаже.</p>
+				</div>
+				<div class="frame42">
+					<p class="p1">---- давая мнимые скидки до 70%</p>
+				</div>
+				<div class="frame67">
+					<!-- Ошибка 1 -->
+					<div class="mistake">
+						<div class="mistake__img">
+							<img src="img/Ellipse 12.svg" alt="">
+						</div>
+						<p>Совершают ошибки во время монтажа</p>
+					</div>
+					<!-- Ошибка 2 -->
+					<div class="mistake">
+						<div class="mistake__img">
+							<img src="img/Ellipse 13.png" alt="">
+						</div>
+						<p>Не имеют собственной производственной базы</p>
+					</div>
+				</div>
+				<div class="frame68">
+					<!-- Ошибка 3 -->
+					<div class="mistake">
+						<div class="mistake__img">
+							<img src="img/Ellipse 14.svg" alt="">
+						</div>
+						<p>Не имеют свою бригаду специалистов</p>
+					</div>
+					<!-- Ошибка 4 -->
+					<div class="mistake">
+						<div class="mistake__img">
+							<img src="img/Ellipse 16.svg" alt="">
+						</div>
+						<p>Долго рассчитывают стоимость</p>
+					</div>
+				</div>
+				<div class="frame68">
+					<!-- Ошибка 5 -->
+					<div class="mistake">
+						<div class="mistake__img">
+							<img src="img/Ellipse 15.svg" alt="">
+						</div>
+						<p>Не предлагают дополнительных услуг</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+
+	<section class="mistakes">
+		<div class="mistakes__container container">
+			<div class="mistakes__photo">
+				<img src="img/Frame 69.svg" alt="">
+			</div>
+
+			<div class="mistakes__text">
+				<div class="frame65">
+					<!-- Блок с описанием ошибок -->
+					<p class="p1">Более 80% компаний представляющих аналогичные услуги изготавливают конструкции из
+						некачественных
+						материалов, а также сталкиваются со сложностями при монтаже.</p>
 				</div>
 				<div class="frame42">
 					<p class="p1">---- давая мнимые скидки до 70%</p>
@@ -195,11 +299,13 @@
 				</div>
 			</div>
 		</div>
-		</div>
 	</section>
+	<!-- Секция с описанием ошибок -->
+
 	<section class="list__advantages">
 		<div class="list__container container">
 			<div class="list__text">
+				<!-- Блок с текстом о преимуществах -->
 				<p class="p1">Желание клиента всегда для нас в приоритете, мы создали лучший сервис, сделав акцент на
 					безупречном качестве
 					обслуживания и продукции</p>
@@ -207,24 +313,29 @@
 			</div>
 			<div class="advanteges__block">
 				<div class="left__panel">
+					<!-- Преимущество 1 -->
 					<div class="list__advantage">
 						<img src="img/Ellipse 17.svg" alt="">
 						<p class="p1">Используем собственную производственную базу, оснащенную современным
 							и высокопроизводительным оборудованием</p>
 					</div>
+					<!-- Преимущество 2 -->
 					<div class="list__advantage">
 						<img src="img/Ellipse 18.svg" alt="">
 						<p class="p1">Устанавливаем конструкции под ключ любого вида и размера</p>
 					</div>
+					<!-- Преимущество 3 -->
 					<div class="list__advantage">
 						<img src="img/Ellipse 19.svg" alt="">
 						<p class="p1">Соблюдаем архитектурные требования</p>
 					</div>
+					<!-- Преимущество 4 -->
 					<div class="list__advantage">
 						<img src="img/Ellipse 20.svg" alt="">
 						<p class="p1">Выполняем проект в сроки
 							и с безупречным качеством</p>
 					</div>
+					<!-- Преимущество 5 -->
 					<div class="list__advantage">
 						<img src="img/Ellipse 21.svg" alt="">
 						<p class="p1">Предоставляем бесплатную услугу - визуализацию объекта в формате 3D,
@@ -232,26 +343,31 @@
 							изменения в
 							проект</p>
 					</div>
+					<!-- Преимущество 6 -->
 					<div class="list__advantage">
 						<img src="img/Ellipse 22.svg" alt="">
 						<p class="p1">Обсуждаем особенности
 							и детали</p>
 					</div>
+					<!-- Преимущество 7 -->
 					<div class="list__advantage">
 						<img src="img/Ellipse 23.svg" alt="">
 						<p class="p1">Производим необходимые расчеты</p>
 					</div>
+					<!-- Преимущество 8 -->
 					<div class="list__advantage">
 						<img src="img/Ellipse 24.svg" alt="">
 						<p class="p1">Уточняем сметную стоимость
 							и сроки строительства</p>
 					</div>
+					<!-- Преимущество 9 -->
 					<div class="list__advantage">
 						<img src="img/Ellipse 25.svg" alt="">
-						<p class="p1">Предлагаем оптималные цены, ввиду долгосрочного партнерства с мировыми лидерами
+						<p class="p1">Предлагаем оптимальные цены, ввиду долгосрочного партнерства с мировыми лидерами
 							рынка
 							стекла и фурнитуры</p>
 					</div>
+					<!-- Преимущество 10 -->
 					<div class="list__advantage">
 						<img src="img/Ellipse 26.svg" alt="">
 						<p class="p1">Гарантируем высокий уровень компетенции сотрудников</p>
@@ -259,6 +375,7 @@
 				</div>
 				<div class="list__advantages-text">
 					<div class="first__paragraph">
+						<!-- Первый абзац текста -->
 						<p class="p1">Изготовление</p>
 						<p class="p2">Мы заботимся о здоровье заказчиков, создаем условия для того, чтобы члены
 							семьи
@@ -269,21 +386,24 @@
 							разработанные конструктивные системы, а остекление производим травмобезопасными
 							стеклопакетами
 						</p>
+						<!-- Второй абзац текста -->
 						<p class="p1">Расчет проекта от инженера</p>
 						<p class="p2">Оставьте заявку на расчет подробной сметы от инженера.</p>
 						<button class="subadvantage__button">Оставить заявку</button>
 					</div>
 					<div class="advantages__photo">
+						<!-- Фотография -->
 						<img class="advantages__photo " src="img/зимний сад.svg" alt="">
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</section>
+
 	<section class="cards__block page__section2">
 		<div class="cards">
 			<div class="product__cards">
+				<!-- Карточка продукта 1 -->
 				<div class="product__card">
 					<div class="product__card-img">
 						<img class="img1" src="img/Rectangle 55.svg" alt="">
@@ -291,6 +411,7 @@
 					<p class="p1">Зимний сад</p>
 					<button class="card__button">Подробнее</button>
 				</div>
+				<!-- Карточка продукта 2 -->
 				<div class="product__card">
 					<div class="product__card-img">
 						<img src="img/IMG_5918 1.png" alt="">
@@ -300,6 +421,7 @@
 				</div>
 			</div>
 			<div class="product__cards">
+				<!-- Карточка продукта 3 -->
 				<div class="product__card">
 					<div class="product__card-img">
 						<img src="img/Rectangle 55.png" alt="">
@@ -307,6 +429,7 @@
 					<p class="p1">Веранда или патио</p>
 					<button class="card__button">Подробнее</button>
 				</div>
+				<!-- Карточка продукта 4 -->
 				<div class="product__card">
 					<div class="product__card-img">
 						<img src="img/IMG_5934 1.png" alt="">
@@ -316,6 +439,7 @@
 				</div>
 			</div>
 			<div class="product__cards">
+				<!-- Карточка продукта 5 -->
 				<div class="product__card">
 					<div class="product__card-img">
 						<img src="img/IMG_5933 1.png" alt="">
@@ -323,6 +447,7 @@
 					<p class="p1">Бассейн под стеклянной крышей</p>
 					<button class="card__button">Подробнее</button>
 				</div>
+				<!-- Карточка продукта 6 -->
 				<div class="product__card">
 					<div class="product__card-img">
 						<img src="img/IMG_5891 1.png" alt="">
@@ -662,6 +787,7 @@
 	</div>
 	<script src="https://unpkg.com/imask"></script>
 	<script src="js/script.js"></script>
+
 
 </body>
 

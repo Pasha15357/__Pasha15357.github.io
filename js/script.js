@@ -1,9 +1,10 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
 	.test(navigator.userAgent)) {
 
-	document.body.classList.add('_touch');
-
-} else document.body.classList.add('_pc');
+	document.body.classList.add('_touch'); // Добавляем класс '_touch' к телу страницы, если пользователь заходит с мобильного устройства
+} else {
+	document.body.classList.add('_pc'); // Добавляем класс '_pc' к телу страницы, если пользователь заходит с компьютера
+}
 
 const header = document.querySelector('.header');
 const content = document.querySelector('.cta');
@@ -30,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
 var scrollToTopButton = document.querySelector('.scroll-to-top');
 function toggleScrollToTop() {
 	if (window.scrollY > 0) {
-		scrollToTopButton.style.display = 'block';
+		scrollToTopButton.style.display = 'block'; // Показываем кнопку "Прокрутить вверх", если пользователь прокрутил страницу вниз
 	} else {
-		scrollToTopButton.style.display = 'none';
+		scrollToTopButton.style.display = 'none'; // Скрываем кнопку "Прокрутить вверх", если пользователь находится вверху страницы
 	}
 }
 window.addEventListener('scroll', toggleScrollToTop);
@@ -40,16 +41,16 @@ scrollToTopButton.addEventListener('click', function (e) {
 	e.preventDefault();
 	window.scrollTo({
 		top: 0,
-		behavior: 'smooth'
+		behavior: 'smooth' // Плавно прокручиваем страницу вверх
 	});
 });
 
 
 
-//Прокрутка при клике
+// Прокрутка при клике
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
-	function onMenuLinkClick(e) { // Исправлено
+	function onMenuLinkClick(e) { // Обработчик клика на ссылку в меню
 		const menuLink = e.target;
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
@@ -62,13 +63,13 @@ if (menuLinks.length > 0) {
 			}
 			window.scrollTo({
 				top: gotoBlockValue,
-				behavior: "smooth"
+				behavior: "smooth" // Плавно прокручиваем страницу к выбранному блоку
 			});
 			e.preventDefault();
 		}
 	}
 	menuLinks.forEach(menuLink => {
-		menuLink.addEventListener("click", onMenuLinkClick); // Исправлено
+		menuLink.addEventListener("click", onMenuLinkClick); // Добавляем обработчик клика на каждую ссылку в меню
 	});
 }
 
@@ -76,20 +77,20 @@ if (menuLinks.length > 0) {
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
 if (iconMenu) {
-	iconMenu.addEventListener("click", function (e) {
-		document.body.classList.toggle('_lock');
-		iconMenu.classList.toggle('_active');
-		menuBody.classList.toggle('_active');
+	iconMenu.addEventListener("click", function (e) { // Обработчик клика на иконку меню
+		document.body.classList.toggle('_lock'); // Переключаем класс '_lock' у тела страницы
+		iconMenu.classList.toggle('_active'); // Переключаем класс '_active' у иконки меню
+		menuBody.classList.toggle('_active'); // Переключаем класс '_active' у меню
 		if (document.body.style.overflow == 'hidden') {
-			document.body.style.overflow = 'auto';
+			document.body.style.overflow = 'auto'; // Включаем прокрутку страницы
 		}
 		else {
-			document.body.style.overflow = 'hidden'
+			document.body.style.overflow = 'hidden' // Отключаем прокрутку страницы
 		}
 		if (scrollToTopButton.style.display == 'none' && window.scrollY > 0) {
-			scrollToTopButton.style.display = 'block';
+			scrollToTopButton.style.display = 'block'; // Показываем кнопку "Прокрутить вверх", если пользователь прокрутил страницу вниз и меню открыто
 		} else {
-			scrollToTopButton.style.display = 'none';
+			scrollToTopButton.style.display = 'none'; // Скрываем кнопку "Прокрутить вверх", если пользователь находится вверху страницы или меню закрыто
 		}
 	})
 }
@@ -100,11 +101,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	var closeBtn = document.getElementById('close-btn');
 
 	function openPopup() {
-		popup.style.display = 'flex';
+		popup.style.display = 'flex'; // Открываем pop-up окно
 	}
 
 	function closePopup() {
-		popup.style.display = 'none';
+		popup.style.display = 'none'; // Закрываем pop-up окно
 	}
 
 	closeBtn.addEventListener('click', closePopup);
@@ -148,3 +149,57 @@ function handleTabClick() {
 tabItems.forEach(item => {
 	item.addEventListener('click', handleTabClick);
 });
+
+
+var swiper = new Swiper(".mySwiper", {
+	spaceBetween: 30,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	pagination: {
+		el: ".swiper-pagination",
+	},
+	mousewheel: true,
+	keyboard: true,
+});
+
+window.addEventListener('load', function () {
+	var preloader = document.getElementById('preloader');
+	preloader.style.display = 'none';
+});
+
+var carousels = document.querySelectorAll('#carousels .carousel');
+var currentCarousel = 0;
+var carouselInterval = setInterval(nextCarousel, 5000); /* Интервал между картинками */
+function nextCarousel() {
+	carousels[currentCarousel].className = 'carousel';
+	currentCarousel = (currentCarousel + 1) % carousels.length;
+	carousels[currentCarousel].className = 'carousel demonstration';
+}
+
+const testimonials = document.querySelector('.testimonials');
+const scroller = testimonials.querySelector('.scroller');
+const nextBtn = testimonials.querySelector('.btn.next');
+const prevBtn = testimonials.querySelector('.btn.prev');
+const itemWidth = testimonials.querySelector('.item').clientWidth;
+
+nextBtn.addEventListener('click', scrollToNextItem);
+prevBtn.addEventListener('click', scrollToPrevItem);
+
+function scrollToNextItem() {
+	if (scroller.scrollLeft < (scroller.scrollWidth - itemWidth))
+		// The scroll position is not at the beginning of last item
+		scroller.scrollBy({ left: itemWidth, top: 0, behavior: 'smooth' });
+	else
+		// Last item reached. Go back to first item by setting scroll position to 0
+		scroller.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+}
+function scrollToPrevItem() {
+	if (scroller.scrollLeft != 0)
+		// The scroll position is not at the beginning of first item
+		scroller.scrollBy({ left: -itemWidth, top: 0, behavior: 'smooth' });
+	else
+		// This is the first item. Go to last item by setting scroll position to scroller width
+		scroller.scrollTo({ left: scroller.scrollWidth, top: 0, behavior: 'smooth' });
+}

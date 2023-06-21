@@ -1,9 +1,11 @@
+/* Сброс стилей для всех элементов */
 * {
 	padding: 0;
 	margin: 0;
 	border: 0;
 }
 
+/* Использование border-box для всех элементов */
 *,
 *::before,
 *::after {
@@ -12,6 +14,7 @@
 	box-sizing: border-box;
 }
 
+/* Удаление фокуса и активного состояния для элементов */
 :focus,
 :active {
 	outline: none;
@@ -21,39 +24,60 @@ a:active {
 	outline: none;
 }
 
+/* Установка отображения блочных элементов для навигации, подвала, заголовка и боковой панели */
 nav,
 footer,
 header,
 aside {
 	display: block;
 }
+
+/* Стили для контейнера */
 .container {
 	max-width: 1130px;
 	padding: 0 15px;
+	width: 100%;
 }
+
+/* Стили для размера шрифта на странице */
 html {
 	font-size: 16px;
+
+	/* Медиа-запросы для разных размеров экрана */
 	@media (max-width: 767px) {
 		font-size: 12px;
 	}
-	@media (max-width: 320px) {
+	@media (max-width: 768px) {
 		font-size: 10px;
+		overflow-x: hidden;
 	}
 }
+
+/* Стили для основного содержимого страницы */
 body {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	height: 100vh;
+
+	@media (max-width: 767px) {
+		display: block;
+	}
 }
+
+/* Стили для ввода, кнопок и текстовых полей */
 input,
 button,
 textarea {
 	font-family: inherit;
 }
 
+/* Удаление стандартного крестика в поле ввода для IE */
 input::-ms-clear {
 	display: none;
 }
+
+/* Стили для кнопок */
 button {
 	cursor: pointer;
 }
@@ -61,6 +85,8 @@ button::-moz-focus-inner {
 	padding: 0;
 	border: 0;
 }
+
+/* Стили для ссылок */
 a,
 a:visited {
 	text-decoration: none;
@@ -68,12 +94,18 @@ a:visited {
 a:hover {
 	text-decoration: none;
 }
+
+/* Удаление маркера списка */
 ul-li {
 	list-style: none;
 }
+
+/* Выравнивание изображений по верхней части */
 img {
 	vertical-align: top;
 }
+
+/* Стили для заголовков */
 h1,
 h2,
 h3,
@@ -84,15 +116,18 @@ h6 {
 	font-weight: 400;
 }
 
-/* Стили для шапки */
+/* Подключение шрифта MyFont */
 @font-face {
 	font-family: MyFont;
 	src: url(../fonts/TTNorms-Medium.ttf);
 }
 
+/* Основные стили для страницы */
 body {
 	font-family: MyFont, Arial, sans-serif;
 }
+
+/* Стили для шапки */
 .header {
 	position: fixed;
 	display: flex;
@@ -114,6 +149,8 @@ body {
 	justify-content: space-between;
 	gap: 30px;
 }
+
+/* Стили для ссылки "Найти на карте" */
 .find__map {
 	display: flex;
 	align-items: center;
@@ -123,31 +160,36 @@ body {
 	font-weight: 500;
 	font-size: 0.9rem;
 	line-height: 13px;
-	/* identical to box height */
-
 	text-decoration-line: underline;
+	color: #000;
 
-	/* color_green_elements */
-
-	color: #3fac3b;
+	/* Стили для состояния наведения */
+	&:hover {
+		color: #3fac3b;
+	}
 }
 
 .find__map img {
 	max-width: 40px;
 }
 
+/* Стили для описания */
 .description a {
 	font-weight: 500;
 	font-size: 1rem;
 	line-height: 15px;
-
-	/* color_ text */
-
 	color: #282828;
+
+	/* Стили для состояния наведения */
+	&:hover {
+		color: #3fac3b;
+	}
 }
+
 .find__text {
 	padding-top: 5px;
 }
+
 .logo {
 	width: 100px;
 	height: 100px;
@@ -157,14 +199,10 @@ body {
 	display: flex;
 	align-items: center;
 	max-width: 202px;
-
 	font-style: normal;
 	font-weight: 500;
 	font-size: 13px;
 	line-height: 15px;
-
-	/* color_ text */
-
 	color: #282828;
 	word-wrap: break-word;
 }
@@ -198,7 +236,6 @@ body {
 	margin: 0;
 	padding: 0;
 	font-weight: 900;
-	font-size: 2.5rem;
 }
 
 .social {
@@ -262,7 +299,8 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	gap: 50px;
+	gap: 30px;
+
 	@media (max-width: 320px) {
 		display: flex;
 		flex-direction: column;
@@ -272,13 +310,19 @@ body {
 .advantage {
 	display: flex;
 	gap: 20px;
+	width: 100%;
+	max-width: 286px;
 }
 .subadvantage {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
-	padding-bottom: 30px;
+	@media (max-width: 320px) {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
 }
 
 .advantages__photo {
@@ -305,7 +349,6 @@ body {
 }
 .subadvantage__button {
 	background: #3fac3b;
-	box-shadow: inset 0px -4px 1px #00af47;
 	border-radius: 50px;
 	padding: 22px 37px;
 	font-weight: 800;
@@ -313,6 +356,9 @@ body {
 	line-height: 16px;
 	text-transform: uppercase;
 	color: white;
+	&:hover {
+		background: #1f851b;
+	}
 }
 
 section {
@@ -332,14 +378,16 @@ section {
 
 .fix__price__button {
 	background: #3fac3b;
-	box-shadow: inset 0px -4px 1px #00af47;
 	border-radius: 50px;
-	padding: 15px 18px;
+	padding: 20px 18px;
 	font-weight: 500;
-	font-size: 12px;
+	font-size: 1rem;
 	line-height: 15px;
 	text-transform: uppercase;
 	color: white;
+	&:hover {
+		background: #1f851b;
+	}
 }
 .fix__price .container {
 	display: flex;
@@ -371,6 +419,9 @@ section {
 	padding: 0px;
 	gap: 50px;
 	min-height: 1125px;
+	@media (max-width: 320px) {
+		gap: 20px;
+	}
 }
 
 .mistakes__text img {
@@ -405,6 +456,11 @@ section {
 	align-items: flex-start;
 	padding: 0px;
 	gap: 4px;
+	@media (max-width: 320px) {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
 }
 .mistake {
 	display: flex;
@@ -477,15 +533,10 @@ section {
 
 	color: #ffffff;
 	background: #3fac3b;
-	box-shadow: inset 0px -4px 1px #00af47;
 	border-radius: 50px;
-}
-
-.next {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 30px;
+	&:hover {
+		background: #1f851b;
+	}
 }
 
 .list__text .p1 {
@@ -494,7 +545,7 @@ section {
 	align-items: flex-start;
 	padding-bottom: 36px;
 	font-weight: 500;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	line-height: 104.52%;
 	/* or 37px */
 
@@ -617,7 +668,7 @@ section {
 	border-radius: 10px;
 	.p1 {
 		font-weight: 700;
-		font-size: 2.1rem;
+		font-size: 1.8rem;
 		line-height: 117.52%;
 	}
 }
@@ -642,15 +693,13 @@ section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 70px;
+	padding: 10px 70px;
 	gap: 10px;
 
 	max-width: 288px;
 
 	background: #3fac3b;
 	/* style */
-
-	box-shadow: inset 0px -4px 1px #00af47;
 	border-radius: 50px;
 	font-weight: 800;
 	font-size: 1rem;
@@ -658,6 +707,9 @@ section {
 	text-align: center;
 
 	color: #ffffff;
+	&:hover {
+		background: #1f851b;
+	}
 }
 
 .product__cards {
@@ -828,12 +880,14 @@ section {
 	padding: 10px 40px;
 	max-width: 188px;
 	background: #3fac3b;
-	box-shadow: inset 0px -4px 1px #00af47;
 	border-radius: 50px;
 	font-weight: 500;
 	font-size: 1rem;
 	line-height: 117.52%;
 	color: #ffffff;
+	&:hover {
+		background: #1f851b;
+	}
 }
 
 .installation__container {
@@ -932,12 +986,14 @@ section {
 	background: #3fac3b;
 	/* style */
 
-	box-shadow: inset 0px -4px 1px #00af47;
 	border-radius: 50px;
 	font-weight: 600;
 	font-size: 0.7rem;
 	line-height: 22px;
 	color: #ffffff;
+	&:hover {
+		background: #1f851b;
+	}
 }
 
 .form input {
@@ -1017,8 +1073,9 @@ section {
 	align-items: center;
 	padding: 10px;
 	background: #555555;
-	gap: 20px;
+	gap: 40px;
 	max-height: none;
+	width: 100%;
 	.p1 {
 		font-weight: 500;
 		font-size: 1rem;
@@ -1026,6 +1083,13 @@ section {
 		/* or 16px */
 
 		color: #ffffff;
+	}
+	@media (max-width: 768px) {
+		gap: 10px;
+	}
+	@media (max-width: 320px) {
+		flex-direction: column;
+		gap: 30px;
 	}
 }
 
@@ -1045,7 +1109,7 @@ section {
 
 .logo__footer {
 	width: 100%;
-	max-width: 200px;
+	max-width: 70px;
 }
 
 .scroll-to-top img {
@@ -1060,7 +1124,7 @@ section {
 	line-height: 20px;
 	border-radius: 100%;
 	opacity: 0.5;
-	z-index: 9999;
+	z-index: 999;
 	box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.5);
 }
 
@@ -1071,6 +1135,9 @@ section {
 .menu__body {
 	display: flex;
 	gap: 30px;
+	p {
+		font-size: 1rem;
+	}
 }
 
 .menu__icon {
@@ -1197,6 +1264,7 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 9998;
 }
 
 .popup-content {
@@ -1211,7 +1279,6 @@ section {
 
 .close-btn {
 	background: #3fac3b;
-	box-shadow: inset 0px -4px 1px #00af47;
 	border-radius: 50px;
 	padding: 15px 18px;
 	font-weight: 500;
@@ -1315,6 +1382,9 @@ section {
 .tab__buttons {
 	display: flex;
 	gap: 32px;
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 }
 .phone__button {
 }
@@ -1337,10 +1407,12 @@ section {
 	padding: 20px 30px;
 	/* style */
 
-	box-shadow: inset 0px -4px 1px #00af47;
 	border-radius: 50px;
 	@media (max-width: 767px) {
-		font-size: 0.3rem;
+		font-size: 1rem;
+	}
+	&:hover {
+		background: #1f851b;
 	}
 }
 .tab__button2 {
@@ -1348,7 +1420,7 @@ section {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 30px;
+	padding: 20px 20px;
 	gap: 10px;
 	font-size: 1rem;
 	background: #ffffff;
@@ -1365,6 +1437,141 @@ section {
 
 	color: #3fac3b;
 	@media (max-width: 767px) {
-		font-size: 0.3rem;
+		font-size: 1rem;
+	}
+	&:hover {
+		background: #96d594;
+		color: #fff;
+	}
+}
+
+.swiper {
+	width: 100%;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 1rem;
+	background-color: aliceblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	@media (max-width: 1920px) {
+		width: 100%;
+	}
+}
+
+.swiper-slide img {
+	width: 100%;
+	object-fit: cover;
+}
+
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#loader {
+	border: 16px solid #f3f3f3;
+	border-top: 16px solid #3498db;
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+	z-index: 9999;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+h1 {
+	margin-top: 30px;
+	text-align: center;
+	color: teal;
+	font-size: 2.2em;
+	letter-spacing: 0.01em;
+}
+.testimonials {
+	max-width: 800px;
+	margin: auto;
+	padding: 15px;
+	text-align: center;
+	position: relative;
+}
+.scroller {
+	overflow-x: scroll;
+	display: flex;
+	scroll-snap-type: x mandatory;
+}
+.item {
+	min-width: 100%;
+	scroll-snap-align: center;
+	background-color: white;
+	margin-bottom: 10px;
+	padding: 0 50px;
+}
+.item img {
+	width: 100%;
+	z-index: 2;
+}
+.card {
+	background-color: rgb(237, 242, 247);
+	border-radius: 20px;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+	z-index: 1;
+}
+.card p {
+	font-style: italic;
+	line-height: 1.6;
+}
+.card span {
+	display: block;
+	margin-top: 20px;
+	color: teal;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+.testimonials .btn {
+	position: absolute;
+	top: 50%;
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+	background-color: rgba(95, 106, 117, 0.3);
+	z-index: 1;
+	line-height: 30px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+.testimonials .btn:hover {
+	background-color: rgba(95, 106, 117, 0.5);
+	cursor: pointer;
+}
+.testimonials .btn.next {
+	right: 15px;
+}
+.testimonials .btn.prev {
+	left: 15px;
+}
+@media screen and (max-width: 480px) {
+	.item {
+		padding: 0 30px;
 	}
 }
