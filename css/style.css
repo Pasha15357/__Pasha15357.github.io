@@ -161,7 +161,7 @@ body {
 	font-size: 0.9rem;
 	line-height: 13px;
 	text-decoration-line: underline;
-	color: #000;
+	color: #fff;
 
 	/* Стили для состояния наведения */
 	&:hover {
@@ -186,93 +186,109 @@ body {
 	}
 }
 
+/* Стили для класса .find__text */
 .find__text {
-	padding-top: 5px;
+	padding-top: 5px; /* Отступ сверху */
 }
 
+/* Стили для класса .logo */
 .logo {
-	width: 100px;
-	height: 100px;
+	width: 100px; /* Ширина логотипа */
+	height: 100px; /* Высота логотипа */
 }
 
+/* Стили для класса .description */
 .description {
-	display: flex;
-	align-items: center;
-	max-width: 202px;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 13px;
-	line-height: 15px;
-	color: #282828;
-	word-wrap: break-word;
+	display: flex; /* Отображение элементов в строку */
+	align-items: center; /* Выравнивание элементов по центру по вертикали */
+	max-width: 202px; /* Максимальная ширина блока */
+	font-style: normal; /* Обычный стиль шрифта */
+	font-weight: 500; /* Нормальная толщина шрифта */
+	font-size: 13px; /* Размер шрифта */
+	line-height: 15px; /* Высота строки */
+	color: #282828; /* Цвет текста */
+	word-wrap: break-word; /* Перенос слов при необходимости */
 }
 
+/* Стили для класса .contact-info */
 .contact-info {
-	margin-top: 20px;
-	font-size: 14px;
+	margin-top: 20px; /* Внешний отступ сверху */
+	font-size: 14px; /* Размер шрифта */
 }
 
+/* Стили для класса .social-icons */
 .social-icons {
-	display: flex;
-	padding: 0px;
-	margin: 0px;
+	display: flex; /* Отображение элементов в строку */
+	padding: 0px; /* Внутренний отступ */
+	margin: 0px; /* Внешний отступ */
 }
 
+/* Стили для изображений внутри класса .social-icons */
 .social-icons img {
-	max-width: 100%;
-	min-width: 90%;
+	max-width: 100%; /* Максимальная ширина изображения */
+	min-width: 90%; /* Минимальная ширина изображения */
 }
 
+/* Стили для элементов списка внутри класса .social-icons */
 .social-icons li {
-	display: inline-block;
-	margin-right: 10px;
+	display: inline-block; /* Отображение элементов списка в ряд */
+	margin-right: 10px; /* Внешний отступ справа */
 }
 
+/* Стили для последнего элемента списка внутри класса .social-icons */
 .social-icons li:last-child {
-	margin-right: 0;
+	margin-right: 0; /* Убрать внешний отступ справа */
 }
 
+/* Стили для класса .phone-number */
 .phone-number {
-	margin: 0;
-	padding: 0;
-	font-weight: 900;
+	margin: 0; /* Убрать внешние отступы */
+	padding: 0; /* Убрать внутренние отступы */
+	font-weight: 900; /* Жирное начертание шрифта */
 }
 
+/* Стили для класса .social */
 .social {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: flex; /* Отображение элементов в столбец */
+	flex-direction: column; /* Отображение элементов в столбец */
+	align-items: center; /* Выравнивание элементов по центру по вертикали */
+	justify-content: center; /* Выравнивание элементов по центру по горизонтали */
 }
 
+/* Стили для класса .call */
 .call {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: flex; /* Отображение элементов в столбец */
+	flex-direction: column; /* Отображение элементов в столбец */
+	align-items: center; /* Выравнивание элементов по центру по вертикали */
+	justify-content: center; /* Выравнивание элементов по центру по горизонтали */
 }
+
+/* Стили для параграфов внутри класса .call */
 .call > p {
-	display: flex;
-	flex-direction: column;
-	margin: 0px;
-	padding: 0px;
+	display: flex; /* Отображение элементов в столбец */
+	flex-direction: column; /* Отображение элементов в столбец */
+	margin: 0px; /* Убрать внешние отступы */
+	padding: 0px; /* Убрать внутренние отступы */
 }
 
+/* Стили для класса .social */
 .social {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 2px;
+	display: flex; /* Отображение элементов в столбец */
+	flex-direction: column; /* Отображение элементов в столбец */
+	align-items: center; /* Выравнивание элементов по центру по вертикали */
+	justify-content: center; /* Выравнивание элементов по центру по горизонтали */
+	gap: 2px; /* Промежуток между элементами */
 }
 
+/* Стили для класса .icon */
 .icon {
-	width: 30px;
-	height: 30px;
+	width: 30px; /* Ширина иконки */
+	height: 30px; /* Высота иконки */
 }
 
+/* Стили для класса .meow */
 .meow {
-	margin: 0;
+	margin: 0; /* Убрать внешний отступ */
 }
 
 .cta_text {

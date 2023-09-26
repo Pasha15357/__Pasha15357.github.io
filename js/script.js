@@ -151,33 +151,38 @@ tabItems.forEach(item => {
 });
 
 
+// Инициализация Swiper
 var swiper = new Swiper(".mySwiper", {
 	spaceBetween: 30,
 	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
+		nextEl: ".swiper-button-next", // Кнопка "Следующий слайд"
+		prevEl: ".swiper-button-prev", // Кнопка "Предыдущий слайд"
 	},
 	pagination: {
-		el: ".swiper-pagination",
+		el: ".swiper-pagination", // Пагинация
 	},
 	mousewheel: true,
 	keyboard: true,
 });
 
+// Скрытие прелоадера после загрузки страницы
 window.addEventListener('load', function () {
 	var preloader = document.getElementById('preloader');
 	preloader.style.display = 'none';
 });
 
+// Карусель
 var carousels = document.querySelectorAll('#carousels .carousel');
 var currentCarousel = 0;
-var carouselInterval = setInterval(nextCarousel, 5000); /* Интервал между картинками */
+var carouselInterval = setInterval(nextCarousel, 5000); // Интервал между картинками
+
 function nextCarousel() {
 	carousels[currentCarousel].className = 'carousel';
 	currentCarousel = (currentCarousel + 1) % carousels.length;
 	carousels[currentCarousel].className = 'carousel demonstration';
 }
 
+// Переключение отзывов
 const testimonials = document.querySelector('.testimonials');
 const scroller = testimonials.querySelector('.scroller');
 const nextBtn = testimonials.querySelector('.btn.next');
@@ -188,18 +193,21 @@ nextBtn.addEventListener('click', scrollToNextItem);
 prevBtn.addEventListener('click', scrollToPrevItem);
 
 function scrollToNextItem() {
-	if (scroller.scrollLeft < (scroller.scrollWidth - itemWidth))
-		// The scroll position is not at the beginning of last item
+	if (scroller.scrollLeft < (scroller.scrollWidth - itemWidth)) {
+		// Позиция прокрутки не находится в начале последнего элемента
 		scroller.scrollBy({ left: itemWidth, top: 0, behavior: 'smooth' });
-	else
-		// Last item reached. Go back to first item by setting scroll position to 0
+	} else {
+		// Достигнут последний элемент. Вернуться к первому элементу, установив позицию прокрутки в 0
 		scroller.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+	}
 }
+
 function scrollToPrevItem() {
-	if (scroller.scrollLeft != 0)
-		// The scroll position is not at the beginning of first item
+	if (scroller.scrollLeft != 0) {
+		// Позиция прокрутки не находится в начале первого элемента
 		scroller.scrollBy({ left: -itemWidth, top: 0, behavior: 'smooth' });
-	else
-		// This is the first item. Go to last item by setting scroll position to scroller width
+	} else {
+		// Это первый элемент. Перейти к последнему элементу, установив позицию прокрутки в ширину блока scroller
 		scroller.scrollTo({ left: scroller.scrollWidth, top: 0, behavior: 'smooth' });
+	}
 }
